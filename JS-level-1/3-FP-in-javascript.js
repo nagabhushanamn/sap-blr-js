@@ -142,11 +142,11 @@
 
 //----------------------------------------------------------------
 
-// function f1(a,b,c,d,e){
+// function f1(a,b,c){
 //     console.dir(arguments);
 //     return arguments[0];
 // }
-// let r=f1();
+// let r=f1(1,2,3);
 // console.log(r);
 
 // e.g
@@ -205,3 +205,93 @@
 // }
 
 // func(1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10);
+
+
+//----------------------------------------------------------------
+
+// closures
+/*
+    A closure is a function having access to the parent scope,
+    even after the parent function has closed.
+
+*/
+
+// function teach(sub) {
+//     console.log('teaching ' + sub);
+//     let notes = `${sub} - notes`;
+//     let fun="bla bla bla";
+//     function learn() {
+//         console.log(`learning with ${notes}`);
+//     }
+//     //learn();
+//     console.log('teaching ends......');
+//     return learn;
+// }
+// let learnFunc=teach('.js');
+// learnFunc();
+// learnFunc();
+
+//---------------------------------------------------------------
+
+/*
+     why/where we need closures ?
+        
+        -> to abstract public-behav of js-module.
+
+       e.g counter-module     
+
+            - count
+            - doCount()
+            - getCount()
+*/
+
+// // self-executable function / IIFE ( Immediatly Invokable Function Expression)
+// const counter=(function(){
+//     // private 
+//     let count=0;  
+//     // public
+//     function doCount(){
+//         count++;
+//     }
+//     function getCount(){
+//         return count;
+//     }
+//     return {
+//         increment:doCount,
+//         get:getCount
+//     }
+// })();
+
+// let p={
+//     name:'Nag',
+//     age:34,
+//     sayName:function(){
+//         console.log('im ....');
+//     }
+// };
+
+//------------------------------------------------------
+
+
+
+// const v=12;
+// v=13;
+
+// const p={name:'Nag'}
+// p.name='sapient';
+
+
+// function f(){
+//     let u=11;
+//     let v=12;
+//     // return {u:u,v:v}
+//     // or
+//     return {u,v} // in es6
+// }
+
+// let r=f();
+// console.log(r);
+
+
+
+//------------------------------------------------------
