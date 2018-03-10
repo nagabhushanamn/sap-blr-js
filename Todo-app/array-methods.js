@@ -160,5 +160,44 @@
 
 //-------------------------------------------------------
 
-let item="1234567890";
-let result=Array.from(item);
+// let item="1234567890";
+// let result=Array.from(item);
+
+
+//---------------------------------------------------------
+
+class Service {
+    constructor() {
+        this.todos = [
+            { id: 1, title: 'task1', completed: false },
+            { id: 2, title: 'task2', completed: false }
+        ]
+    }
+    editTodo(id,newTitle){
+        this.todos.forEach(function(item,idx){
+            if(item.id===id){
+                item.title=newTitle
+            }
+        })
+    }
+    deleteTodo(id){
+        this.todos.forEach((item,idx)=>{
+            if(item.id===id){
+                this.todos.splice(idx,1)
+            }
+        })
+    }
+}
+
+let service=new Service();
+service.editTodo(2,'Task Two');
+service.deleteTodo(2);
+
+
+// ADD_TODO
+// EDIT_TODO
+// DELETE_TODO
+// COMPLETE_TODO
+// COMPLETE_ALL
+// CLEAR_COMPLETED
+// VIEW  ( all | completed | active )
