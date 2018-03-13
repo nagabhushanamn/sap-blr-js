@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        a[href$='pdf']::after {
+          content: '\f1c1';
+          font-family: FontAwesome;
+          color:red;
+        }
+        a[href$='xls']::after {
+          content: '\f1c3';
+          font-family: FontAwesome;
+          color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>All reports</h1>
+    <hr/>
+
+    <a href="report1.pdf">report-1</a>
+    <br/>
+    <a href="report2.pdf">report-2</a>
+    <br/>
+    <a href="report3.xls">report-3</a>
+    <br/>
+    <a href="report4.pdf">report-4</a>
+    <br/>
+    <a href="report4.xls">report-5</a>
+    <br/>
+    <a href="report4.pdf">report-4</a>
+    <br/>
+    <a href="report4.pdf">report-4</a>
+
+
+</body>
+
+</html>
