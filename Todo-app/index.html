@@ -6,35 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="todo-app.css" />
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
-<body>
+<body class="container">
+
+    <div class="page-header"> Todo App</div>
 
     <section>
-        <header class="header">
-            <h1>Todos</h1>
-            <input id="new-todo" placeholder="Title.." />
-            <button class="btn">Add </button>
+        <header class="well">
+            <input id="new-todo" class="input-lg" placeholder="Title" />
+            <!-- <button id="add-btn" class="btn btn-default btn-lg">Add</button> -->
         </header>
         <section>
-            <ul id="todo-list">
-                <li>
-                    <div>
-                        <label>Task 1</label>
-                        <button class="destroy">delete</button>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <label>Task 2</label>
-                        <button class="destroy">delete</button>
-                    </div>
-                </li>
+            <ul id="todo-list" class="list-group">
             </ul>
         </section>
     </section>
 
+    <script src="todo-app.js"></script>
 
 </body>
 
