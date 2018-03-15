@@ -1,0 +1,130 @@
+
+
+
+Product Management ( PM )
+---------------------------
+
+-----------------------------------------------------
+
+  1 - datasoucre  ==> persist business data
+        - files
+        - SQL    i.e Oracle / MySQL
+        - NoSQL  i.e MongoDB
+  2 - application ==> process business data 
+       - java based web application
+
+
+-----------------------------------------------------       
+1. SQL-datasource
+
+     ==> design based on E/R model
+     		ref: pm-schema.sql
+     		
+-----------------------------------------------------	
+
+
+
+-----------------------------------------------------	
+2. Application	( PM )
+-----------------------------------------------------	
+
+Model:  business-data/entity
+
+	a. Product
+		- id
+		- name
+		- price
+		- makeDate
+		- description	
+			
+			
+-----------------------------------------------------	
+
+  Layer(s)  ==> logical organization/separation of code
+  
+  	1. data/repository layer		
+  		 ==> data accessing logic
+    
+    2. service layer		
+    	    ==> business logic 
+    
+    3. web-layer
+    		==> http request/response logic	    
+
+-------------------------------------------------------
+
+
+1. data/repository layer	
+
+	1. application ==> object
+	2. datasource ==> relation/table
+	
+	 ==> ORM ( Object Relation Mapping )
+	 
+	 How to implement ORM in java-language?
+
+			-> using JDBC API  ( java.sql.* ) ( manual )
+			
+			or
+			
+		    -> using ORM Frameworks
+		    
+		    		- Hibernate
+		    		- Eclipselink
+		    		- TopLink
+		    		- iBatis
+		    		...
+	    		
+
+---------------------------------------------------------------	 
+		
+  basic steps to use JDBC API:
+  
+  1. register JDBC-driver with JDBC-API
+  2. create connection URL,userName and password	
+  
+  3. create JDBC statements with SQL
+  4. execute JDBC statements and process results
+  
+  5. Handle SQL Exceptions
+  6. if required manage Transactions
+  
+  7. close connection.
+	
+---------------------------------------------------------------	 
+	 
+		
+
+	
+	
+  		 
+  		 
+  		 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
