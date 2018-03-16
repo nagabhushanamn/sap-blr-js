@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@page import="java.util.*,com.sapient.pm.model.*" %>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -8,7 +9,7 @@
 <body>
 
 	<div class="container">
-		<div class="page-header">PM-v1</div>
+	<div class="page-header">PM-v1</div>
 	
 	<div class="panel panel-default">
 		<div class="panel-heading">All Products</div>
@@ -24,13 +25,20 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
+				<% List<Product> products=(List<Product>)request.getAttribute("products"); %>
+				 <%
+				 	for(Product product:products){
+				 %>	
+				 	<tr>
+						<td><%=product.getId() %></td>
+						<td><%=product.getName() %></td>
+						<td>&#8377;<%=product.getPrice() %></td>
+						<td><%=product.getMakeDate() %></td>
+						<td><%=product.getDescription() %></td>
 					</tr>
+				 <%
+				 	}
+				 %>
 				</tbody>
 			</table>
 		</div>
@@ -67,7 +75,7 @@
 		</div>
 	
 	</div>
-
+	</div>
 </body>
 </html>
 

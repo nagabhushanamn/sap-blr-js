@@ -105,6 +105,19 @@ View - layer
   
   
 
+--------------------------------------------------------------
+
+
+web-layer
+----------
+
+	servlet   ( controller of java web application  )
+	
+	==> program which can handles all HTTP Request & Response
+	
+	- ProductsController
+
+-------------------------------------------------------------
 
 
 
