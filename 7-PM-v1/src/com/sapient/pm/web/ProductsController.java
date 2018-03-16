@@ -15,16 +15,25 @@ import com.sapient.pm.model.Product;
 import com.sapient.pm.repository.JdbcProductRepositoryImpl;
 import com.sapient.pm.repository.ProductRepository;
 
-@WebServlet(urlPatterns = { "/pm", "/save-product" })
+@WebServlet(urlPatterns = { "/load-products", "/save-product", "/delete-product" })
 public class ProductsController extends HttpServlet {
 
 	private ProductRepository productRepository = new JdbcProductRepositoryImpl();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		List<Product> products = productRepository.findAll();
-		req.setAttribute("products", products);
-		req.getRequestDispatcher("PM.jsp").forward(req, resp);
+		String uri = req.getRequestURI();
+		String path = uri.substring(uri.lastIndexOf('/'));
+		if (path.equals("/load-products")) {
+			List<Product> products = productRepository.findAll();
+			req.setAttribute("products", products);
+			req.getRequestDispatcher("PM.jsp").forward(req, resp);
+		}
+		if (path.equals("/delete-product")) {
+			String id = req.getParameter("id");
+			productRepository.delete(Integer.parseInt(id));
+			resp.sendRedirect("load-products");
+		}
 	}
 
 	@Override
@@ -57,7 +66,7 @@ public class ProductsController extends HttpServlet {
 		// req.setAttribute("products", products);
 
 		// req.getRequestDispatcher("PM.jsp").forward(req, resp);
-		resp.sendRedirect("pm");
+		resp.sendRedirect("load-products");
 	}
 
 }

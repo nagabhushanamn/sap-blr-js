@@ -68,7 +68,7 @@
 						<td><%=product.getMakeDate() %></td>
 						<td><%=product.getDescription() %></td>
 						<td><a href><i class="glyphicon glyphicon-edit"></i></a></td>
-						<td><a href><i class="glyphicon glyphicon-trash"></i></a></td>
+						<td><a href="delete-product?id=<%=product.getId() %>"><i class="glyphicon glyphicon-trash"></i></a></td>
 					</tr>
 				 <%
 				 	}
