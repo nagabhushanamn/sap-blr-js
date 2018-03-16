@@ -11,9 +11,9 @@
 	<div class="container">
 	<div class="page-header">PM-v1</div>
 	
-		<div>${status}</div>
-		
-		<div class="row">
+		<button id="new-btn" class="btn btn-primary">New</button>
+		<hr/>
+		<div class="row" id="product-form">
 			<div class="col-xs-8 col-sm-6 col-md-6">
 			<div class="panel panel-default">
 				<div class="panel-heading">Product Form</div>
@@ -36,6 +36,7 @@
 							<textarea name="description" rows="5" cols="35" class="form-control"></textarea>
 						</div>
 						<button class="btn btn-primary">save</button>
+						<button id="cancel-btn" type="button" class="btn btn-danger">cancel</button>
 					</form>	
 				</div>
 			</div>
@@ -80,6 +81,10 @@
 
 	<hr/>
 	</div>
+	
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	
 </body>
 </html>
 
