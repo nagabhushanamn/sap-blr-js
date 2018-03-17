@@ -1,0 +1,25 @@
+
+
+MTS
+==================
+
+
+ Model
+ ------
+ 
+ 	- Account   
+ 		
+  data/repository layer
+  ---------------------
+  
+  	- AccountRepository
+  	
+  	
+  service layer
+  ---------------------		
+  
+  	-TxrService
+  	
+  	
+  	
+ 	
