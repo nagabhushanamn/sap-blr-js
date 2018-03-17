@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="priceMatrixV1" class="com.shop.pm.PriceMatrixImpl_v1">
+	</bean>	
+	<bean id="priceMatrixV2" class="com.shop.pm.PriceMatrixImpl_v2">
+	</bean>
+	
+	<bean id="billComp1" class="com.shop.bill.BillingImpl">
+		<constructor-arg ref="priceMatrixV1"/>
+	</bean>
+
+	<bean id="billComp2" class="com.shop.bill.BillingImpl">
+		<constructor-arg ref="priceMatrixV2"/>
+	</bean>
+	
+
+</beans>
